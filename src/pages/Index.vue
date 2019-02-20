@@ -13,13 +13,13 @@
         <q-select
           :value='row'
           dense
-          :options='localSubjects'
+          :options='options'
           option-label="name"
           option-value="id"
           map-options
           borderless
           @input="val => updateSelection(row.__index, val)"
-          style="overflow: visible"
+
         />
       </td>
     </template>
@@ -27,12 +27,6 @@
 </div>
   </q-page>
 </template>
-
-<style>
-.table-editor .q-table__middle{
-  overflow: visible;
-}
-</style>
 
 <script>
 export default {
@@ -42,7 +36,13 @@ export default {
       options: [
         { name: 'Alice', id: '001' },
         { name: 'Bob', id: '002' },
-        { name: 'Charlie', id: '003' }
+        { name: 'Charlie', id: '003' },
+        { name: 'David', id: '004' },
+        { name: 'Elizabeth', id: '005' },
+        { name: 'Frank', id: '006' },
+        { name: 'George', id: '007' },
+        { name: 'Hailey', id: '008' },
+        { name: 'Imogene', id: '009' }
       ],
       tableData: [
         { name: 'Bob', id: '002' },
@@ -69,3 +69,9 @@ export default {
   }
 }
 </script>
+
+<style>
+  .table-editor .q-table__middle {
+    overflow: visible;
+  }
+</style>
